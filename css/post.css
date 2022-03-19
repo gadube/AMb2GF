@@ -1,0 +1,106 @@
+/* blog.css             */
+/* Author: Griffin Dube */
+/* Styles for my blog   */
+
+body {
+    background-color: #202128;
+    color: #E6E6E6;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-family: 'Open Sans';
+    font-size: 13pt;
+    padding-bottom: 6em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #f2f2f2;
+    font-family: 'Roboto Mono';
+}
+
+p {
+    font-size: 15pt;
+    max-width: 80em;
+}
+
+a {
+    text-decoration: underline;
+    color: #e6e6e6;
+}
+
+a:hover {
+    color: #ff3333;
+}
+
+a:visited {
+    color: #a6a6a6;
+}
+
+a:visited:hover {
+    color: #ff3333;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 40%;
+}
+
+footer {
+    clear: both;
+    font-size: 10pt;
+    color: #A6A6A6;
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: -50px;
+
+}
+
+/* Menu Bar Styling */
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-bar li {
+    float: right;
+    font-size: 14pt;
+    line-height: 1.2em;
+}
+
+.menu-bar a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    text-decoration: underline;
+    color: #e6e6e6;
+}
+
+.menu-bar a:hover {
+    color: #ff3333;
+}
+
+.menu-bar img {
+    float: left;
+    width: 220px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.menu-bar hr {
+    color: #484848;
+}
+
+/* Blog specific styles */
+#date-string {
+    font-size: 10pt !important;
+    color: #A6A6A6;
+}
+
+pre > code.sourceCode > span > a:first-child::before { text-decoration: none; }
