@@ -119,6 +119,13 @@ footer {
     margin-right: 0;
 }
 
+@media screen and (max-width: 600px) {
+    div.menu-bar > img {
+        display: none !important;
+    }
+}
+
+
 .menu-bar hr {
     color: #484848;
 }
