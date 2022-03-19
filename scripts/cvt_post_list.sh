@@ -1,5 +1,4 @@
 #!/bin/bash -e
-#auto generate the blog.html page
 
 THIS_DIR=$( dirname ${BASH_SOURCE[0]} )
 BLOG_LIST=$THIS_DIR/../blog.md
@@ -12,6 +11,8 @@ echo "title: Blog" >> $BLOG_LIST
 echo "date:" >> $BLOG_LIST
 echo "---" >> $BLOG_LIST
 echo >> $BLOG_LIST
+echo >> $BLOG_LIST
+echo "Welcome to one of the few remaining corners of the internet specializing in **unsocial media**. That is, a space where you have to read and think about the posts without being able to capitalize on your desire to _smash that like button_. I'm using this blog as a way to improve my writing, learn about interesting things, and share thoughts and ideas with others. I will gladly accept any comments, concerns or critiques :)" >> $BLOG_LIST
 echo >> $BLOG_LIST
 echo "## Latest Posts" >> $BLOG_LIST
 # convert recent posts
@@ -46,7 +47,7 @@ echo "## Posts $oldPostYear" >> $BLOG_LIST
 
 for post in $( ls -1t $THIS_DIR/../blog )
 do
-    $THIS_DIR/cvt_post.sh $THIS_DIR/../blog/$post > $THIS_DIR/../src/blog/${post%%.*}.html 2> /dev/null
+    $THIS_DIR/cvt_post.sh $THIS_DIR/../blog/$post > $THIS_DIR/../src/blog/${post%%.*}.html 2> /dev/null &
     postYear=$( ls -l --full-time $THIS_DIR/../blog/$post | tr "-" " " | tr -s " " | cut -d " " -f 9 )
     [ -z "$postYear" ] && postYear=$oldPostYear
     # echo "oldPostyear: $oldPostYear"
